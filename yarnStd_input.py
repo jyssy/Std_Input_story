@@ -7,6 +7,7 @@ that results in an output file in .txt with the full story. Every story should b
 input can be changed at will'''
 
 name = input('What name do you prefer?')
+age = input("How many years have you been on this planet (we call this 'age')?")
 
 print('hello ' + name + '!')
 
@@ -92,10 +93,6 @@ for pause in [1, 1]:
 
 print(character + ' developed a viral infection (a positive one, maybe...) that forced the creation of ' + head + ' and thus allowed it to become self-conscious. ')
 
-for pause in [1, 1]:
-	print(time.ctime())
-	time.sleep(pause)
-
 print(character + ' then pointed its ' + finger + ' at the recto of the page (hard to imagine since it is considered a 2-dimensional thing. Have you ever read the novel, Flatland? ')
 
 for pause in [1]:
@@ -104,16 +101,18 @@ for pause in [1]:
 
 print('Anyway... ' + character + "'s consciousness birthed over the course of " + passingTime + ' [insert units of timehere] and developed a significant way to move about in the form of ' + mobility + '. The end-game was to rebuild a new life outside of the pages of ' + book + ', maybe to meld with other books or maybe ONLY to run about ' + library + '. It was not sure because ' + character + "'s consciousness was new. " + library + ' had certainly changed.')
 
-for pause in [1, 1]:
-	print(time.ctime())
-	time.sleep(pause)
-
 print(name + ', I wonder what ' + library + ' looked like then..') 
 
 for pause in [1, 1]:
 	print(time.ctime())
 	time.sleep(pause)
 
+with open('yarn_input.txt', 'w') as yArn:
+	# pass
+	yArn.write(time.ctime())
+	yArn.write('\n')
+	yArn.write(name + ', the summary of this whole ' + library + ' yarn is this: ' + character + ' developed a viral infection (a positive one, maybe...) that forced the creation of ' + head + ' and thus allowed it to become self-conscious. Then, ' + character + ' pointed its ' + finger + ' at the recto of the page (hard to imagine since it is considered a 2-dimensional thing. Have you ever read the novel, Flatland? ... Anyway... ' + character + "'s consciousness birthed over the course of " + passingTime + ' [insert units of timehere] and developed a unique mode to move about in the form of ' + mobility + '. The end-game was to rebuild a new life outside of the pages of ' + book + ', maybe to meld with other books or maybe ONLY to run about the ' + library + '. It was not sure because ' + character + "'s consciousness was new. " + library + ' had certainly changed when. ' + character + ' got outside the limits of ' + book + '.')
+# 
 decision = input('In the form of a simple yes or no (no capital letters), please let the script know if you would like the answer to the question ')
 
 print(decision)
